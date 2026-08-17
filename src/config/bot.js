@@ -24,7 +24,7 @@ export const botConfig = {
     activities: [
       {
         name: "Custom Status", // required by Discord API, not shown in the client
-        state: "stalking",     // this is what people actually see
+        state: "Believe in The Cat Invasion",     // this is what people actually see
         type: 4,               // Custom
       },
     ],
@@ -93,18 +93,18 @@ export const botConfig = {
   embeds: {
     colors: {
       // Main brand colors.
-      primary: "#336699",
-      secondary: "#2F3136",
+      primary: "#870000",
+      secondary: "#870000",
 
       // Standard status colors for success/error/warning/info messages.
-      success: "#57F287",
-      error: "#ED4245",
-      warning: "#FEE75C",
-      info: "#3498DB",
+      success: "#870000",
+      error: "#870000",
+      warning: "#870000",
+      info: "#870000",
 
       // Neutral utility colors.
-      light: "#FFFFFF",
-      dark: "#202225",
+      light: "#870000",
+      dark: "#870000",
       gray: "#99AAB5",
 
       // Discord-style palette shortcuts.
@@ -117,8 +117,8 @@ export const botConfig = {
 
       // Feature-specific colors.
       giveaway: {
-        active: "#57F287",
-        ended: "#ED4245",
+        active: "#870000",
+        ended: "#870000",
       },
       ticket: {
         open: "#57F287",
@@ -141,7 +141,7 @@ export const botConfig = {
     },
     footer: {
       // Default footer text used in bot embeds.
-      text: "Titan Bot",
+      text: "The Cat",
       // Footer icon URL (null = no icon).
       icon: null,
     },
@@ -161,36 +161,36 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "Catollar",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "Catollars",
       // Currency symbol shown in balances.
       symbol: "$",
     },
 
     // Starting balance for new users.
-    startingBalance: 0,
+    startingBalance: 1000,
 
     // Maximum bank amount before upgrades (if upgrades are used).
-    baseBankCapacity: 100000,
+    baseBankCapacity: 200000,
 
     // Daily reward amount.
-    dailyAmount: 100,
+    dailyAmount: 1000,
 
     // Work command random payout range.
-    workMin: 10,
-    workMax: 100,
+    workMin: 100,
+    workMax: 300,
 
     // Beg command random payout range.
-    begMin: 5,
-    begMax: 50,
+    begMin: 30,
+    begMax: 150,
 
     // Command cooldowns (milliseconds).
     cooldowns: {
       daily: 24 * 60 * 60 * 1000,
-      work: 60 * 60 * 1000,
-      crime: 2 * 60 * 60 * 1000,
-      rob: 4 * 60 * 60 * 1000,
+      work: 15 * 60 * 1000,
+      crime: 30 * 60 * 1000,
+      rob: 1 * 60 * 60 * 1000,
     },
 
     // Chance to succeed when robbing (0.4 = 40%).
@@ -198,7 +198,7 @@ export const botConfig = {
 
     // Jail time after failed rob (milliseconds).
     // 3600000 = 1 hour.
-    robFailJailTime: 3600000,
+    robFailJailTime: 1800000,
   },
 
   // =========================
