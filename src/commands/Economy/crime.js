@@ -4,16 +4,16 @@ import { getEconomyData, setEconomyData } from '../../utils/economy.js';
 import { withErrorHandling, createError, ErrorTypes } from '../../utils/errorHandler.js';
 import { InteractionHelper } from '../../utils/interactionHelper.js';
 
-const CRIME_COOLDOWN = 60 * 60 * 1000;
-const JAIL_TIME = 2 * 60 * 60 * 1000;
+const CRIME_COOLDOWN = 30 * 60 * 1000;
+const JAIL_TIME = 30 * 60 * 1000;
 const FINE_RATE = 0.2;
 
 const CRIME_TYPES = [
-    { name: "Pickpocketing", min: 100, max: 500, risk: 0.3 },
-    { name: "Burglary", min: 300, max: 1000, risk: 0.4 },
-    { name: "Bank Heist", min: 1000, max: 5000, risk: 0.6 },
-    { name: "Art Theft", min: 2000, max: 10000, risk: 0.7 },
-    { name: "Cybercrime", min: 5000, max: 20000, risk: 0.8 },
+    { name: "Pickpocketing", min: 300, max: 600, risk: 0.3 },
+    { name: "Burglary", min: 600, max: 1200, risk: 0.4 },
+    { name: "Bank Heist", min: 1200, max: 5000, risk: 0.6 },
+    { name: "Art Theft", min: 2500, max: 10000, risk: 0.7 },
+    { name: "Cybercrime", min: 5000, max: 25000, risk: 0.8 },
 ];
 
 export default {
@@ -110,7 +110,7 @@ export default {
                 const embed = warningEmbed(
                     "🚔 Crime Failed!",
                     `You were caught while attempting ${crime.name} and have been sent to jail! ` +
-                    `You were fined ${fine.toLocaleString()} coins and will be in jail for 2 hours.`
+                    `You were fined ${fine.toLocaleString()} coins and will be in jail for 30 minutes.`
                 );
                 
                 await InteractionHelper.safeEditReply(interaction, { embeds: [embed] });
