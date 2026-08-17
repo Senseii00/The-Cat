@@ -9,14 +9,14 @@ import { DEFAULT_ECONOMY_DATA } from './constants.js';
 import { createError, ErrorTypes, wrapServiceBoundary } from './errorHandler.js';
 
 const ECONOMY_CONFIG = BotConfig.economy || {};
-const BASE_BANK_CAPACITY = ECONOMY_CONFIG.baseBankCapacity || 10000;
-const BANK_CAPACITY_PER_LEVEL = ECONOMY_CONFIG.bankCapacityPerLevel || 5000;
-const DAILY_AMOUNT = ECONOMY_CONFIG.dailyAmount || 100;
-const WORK_MIN = ECONOMY_CONFIG.workMin || 10;
-const WORK_MAX = ECONOMY_CONFIG.workMax || 100;
+const BASE_BANK_CAPACITY = ECONOMY_CONFIG.baseBankCapacity || 200000;
+const BANK_CAPACITY_PER_LEVEL = ECONOMY_CONFIG.bankCapacityPerLevel || 50000;
+const DAILY_AMOUNT = ECONOMY_CONFIG.dailyAmount || 1000;
+const WORK_MIN = ECONOMY_CONFIG.workMin || 30;
+const WORK_MAX = ECONOMY_CONFIG.workMax || 150;
 const COOLDOWNS = ECONOMY_CONFIG.cooldowns || {
 daily: 24 * 60 * 60 * 1000,
-work: 30 * 60 * 1000,
+work: 10 * 60 * 1000,
 crime: 30 * 60 * 1000,
 rob: 1 * 60 * 60 * 1000,
 };
@@ -374,7 +374,7 @@ export function getShopInventory() {
             price: 2000,
             description: 'Work as a programmer for higher pay!',
             type: 'tool',
-            workMultiplier: 1.5
+            workMultiplier: 2
         },
         {
             id: 'bank_loan',
