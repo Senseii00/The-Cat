@@ -34,7 +34,7 @@ cooldown: 86400000,
         durability: 100,
         effect: {
             type: 'mining_yield',
-            multiplier: 2.0
+            multiplier: 5.0
         }
     },
     {
@@ -126,7 +126,7 @@ roleId: null,
     {
         id: 'personal_safe',
         name: '🔒 Personal Safe',
-        price: 30000,
+        price: 300000,
         description: 'Protects your money from theft. Prevents others from robbing you.',
         type: 'tool',
         durability: null,
