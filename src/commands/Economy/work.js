@@ -6,10 +6,10 @@ import { logger } from '../../utils/logger.js';
 import { InteractionHelper } from '../../utils/interactionHelper.js';
 import { botConfig } from '../../config/bot.js';
 
-const WORK_COOLDOWN = botConfig.economy?.cooldowns?.work ?? 30 * 60 * 1000;
+const WORK_COOLDOWN = botConfig.economy?.cooldowns?.work ?? 10 * 60 * 1000;
 const MIN_WORK_AMOUNT = botConfig.economy?.workMin ?? 10;
 const MAX_WORK_AMOUNT = botConfig.economy?.workMax ?? 100;
-const LAPTOP_MULTIPLIER = 1.5;
+const LAPTOP_MULTIPLIER = 2;
 const WORK_JOBS = [
     "Software Developer",
     "Barista",
