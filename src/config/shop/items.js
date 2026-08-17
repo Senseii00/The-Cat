@@ -40,8 +40,8 @@ cooldown: 86400000,
     {
         id: 'premium_role',
         name: 'Premium Server Role',
-        price: 15000,
-        description: 'A special role granting a fancy color and a 10% daily bonus.',
+        price: 150000,
+        description: 'A special role granting a fancy color and a 100% daily bonus.',
         type: 'role',
 roleId: null,
         effect: {
@@ -95,7 +95,7 @@ roleId: null,
         durability: 200,
         effect: {
             type: 'work_yield',
-            multiplier: 1.5
+            multiplier: 2
         }
     },
     {
@@ -114,13 +114,13 @@ roleId: null,
     {
         id: 'bank_note',
         name: '📜 Bank Note',
-        price: 25000,
+        price: 50000,
         description: 'Increases bank capacity by 10,000. Can be purchased multiple times.',
         type: 'tool',
         durability: null,
         effect: {
             type: 'bank_capacity',
-            increase: 10000
+            increase: 50000
         }
     },
     {
